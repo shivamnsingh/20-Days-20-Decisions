@@ -318,3 +318,118 @@ clickable table of contents, `capstone/` folder for Day 20.
 **Portfolio idea:** This is your pinned LinkedIn post, resume link, and GitHub README hero.
 **Decision Card:** Summarize the top 3 recommendations across the whole series in one place — this is the single artifact you want a recruiter to open first.
 **CTA:** "If you're hiring Data Analysts or know someone who is — I'd love an intro. Here's 20 days of proof I can do the job."
+
+
+## Bonus Days 21–28: Metrics & Frameworks Extension Pack
+
+### Day 21 — LTV:CAC Ratio
+**Hook:** "I thought we had a great CAC. Then I checked what those customers were actually worth — and the 'great' number turned into a warning sign."
+**Deliverable:** LTV:CAC ratio calculation across customer segments.
+**Business example:** Marketing budget justification for leadership.
+**Dataset:** Online Retail II or Telco Customer Churn (reused).
+**GitHub:** `day21-ltv-cac-ratio` — reusable ratio calculator function.
+**Portfolio idea:** Pair with Day 11's CLV calculator — position as "part 2" of that series.
+**Decision Card:**
+- Insight: State the actual LTV:CAC ratio and how it compares to the 3:1 benchmark.
+- Recommendation: Below 3:1 → fix retention or targeting before increasing spend; above 5:1 → you may be under-investing in growth.
+- Confidence: Medium — sensitive to the CLV time horizon assumed.
+- Next: Break the ratio down by acquisition channel (paid, organic, referral).
+**CTA:** "Is 3:1 still the right benchmark, or does it depend on the business?"
+
+### Day 22 — Net Revenue Retention vs. Gross Revenue Retention
+**Hook:** "Our logo retention looked fine. Then I split it into NRR and GRR — and found we were quietly shrinking."
+**Deliverable:** NRR/GRR calculation and comparison by cohort.
+**Business example:** SaaS revenue health check for a board update.
+**Dataset:** Telco Customer Churn (adapted) or a synthetic subscription dataset.
+**GitHub:** `day22-nrr-grr` — reusable retention metric functions.
+**Portfolio idea:** Directly ties to Day 12's cohort work — reference the callback explicitly.
+**Decision Card:**
+- Insight: State the gap between NRR and GRR and what it implies (expansion masking churn, or vice versa).
+- Recommendation: If NRR < 100%, expansion revenue isn't covering losses — retention is the priority, not upsell.
+- Confidence: Medium-high — depends on clean segmentation of upgrades/downgrades/churn.
+- Next: Identify which segment is driving the gap.
+**CTA:** "Which number would you rather report to your board — NRR or GRR?"
+
+### Day 23 — Rule of 40
+**Hook:** "Growing 60% a year sounds great. Until I checked what it cost — and the Rule of 40 said this business was underwater."
+**Deliverable:** Rule of 40 calculation (growth rate + profit margin) across a sample of companies or synthetic scenarios.
+**Business example:** Investor-style evaluation of growth efficiency.
+**Dataset:** Public SaaS company financials (sample) or synthetic scenario data.
+**GitHub:** `day23-rule-of-40`.
+**Portfolio idea:** Frame as "how investors screen SaaS companies in 30 seconds" — strong recruiter hook.
+**Decision Card:**
+- Insight: State the combined growth + margin score vs. the 40% threshold.
+- Recommendation: Below 40 → growth is coming at an unsustainable cost; slow down and fix margin before chasing more growth.
+- Confidence: Medium — a blunt heuristic, not a full valuation model.
+- Next: Break the score down over time to see if the trend is improving or worsening.
+**CTA:** "Would you invest in a company below the Rule of 40 line?"
+
+### Day 24 — Magic Number (Sales Efficiency)
+**Hook:** "Sales and marketing spend went up 40%. Revenue barely moved. One number explained exactly why."
+**Deliverable:** Magic Number calculation (net new ARR ÷ prior quarter S&M spend).
+**Business example:** SaaS sales efficiency review.
+**Dataset:** Synthetic SaaS quarterly revenue/spend dataset.
+**GitHub:** `day24-magic-number`.
+**Portfolio idea:** Pair with Day 23 — "efficiency vs. growth" mini-series.
+**Decision Card:**
+- Insight: State the Magic Number and how it compares to the 0.75–1.0 healthy range.
+- Recommendation: Below 0.75 → pause scaling spend and fix funnel/conversion first; above 1.0 → safe to invest more aggressively.
+- Confidence: Medium — one-quarter snapshots are noisy; trend matters more than a single reading.
+- Next: Trend the Magic Number over 4+ quarters instead of one snapshot.
+**CTA:** "Would you increase sales spend on a Magic Number below 0.5?"
+
+### Day 25 — Burn Multiple
+**Hook:** "This startup raised a lot and grew fast. The Burn Multiple showed exactly how much cash it took to buy that growth."
+**Deliverable:** Burn Multiple calculation (net burn ÷ net new ARR).
+**Business example:** Startup cash efficiency check for a fundraising narrative.
+**Dataset:** Synthetic startup financials dataset.
+**GitHub:** `day25-burn-multiple`.
+**Portfolio idea:** Natural continuation of Day 15's unit economics theme — same "growth isn't free" thread.
+**Decision Card:**
+- Insight: State the Burn Multiple and how it compares to benchmark bands (under 1x excellent, 1–2x good, 3x+ concerning).
+- Recommendation: High Burn Multiple → extend runway by cutting inefficient spend before the next raise, not after.
+- Confidence: Medium — one period's multiple can be distorted by one-time costs.
+- Next: Compare Burn Multiple trend against headcount growth.
+**CTA:** "What Burn Multiple would make you walk away from investing?"
+
+### Day 26 — AARRR (Pirate Metrics) Funnel
+**Hook:** "Everyone was optimizing Acquisition. The real leak was one step later — Activation."
+**Deliverable:** Full AARRR funnel breakdown (Acquisition, Activation, Retention, Referral, Revenue).
+**Business example:** Product-led growth diagnostic.
+**Dataset:** GA4 sample dataset (reused from Day 14) or a product analytics sample.
+**GitHub:** `day26-aarrr-funnel`.
+**Portfolio idea:** Position as the "framework that ties Days 14, 15, and 22 together" — a synthesis post.
+**Decision Card:**
+- Insight: State which stage has the largest percentage drop relative to the others.
+- Recommendation: Fix the weakest stage first — more top-of-funnel spend won't help if Activation is the real bottleneck.
+- Confidence: Medium — stage boundaries depend on how "activation" is defined for this product.
+- Next: Define an activation event and re-run the funnel with it.
+**CTA:** "Which letter in AARRR is your weakest link — be honest."
+
+### Day 27 — North Star Metric
+**Hook:** "Revenue was up. Users were quietly leaving unhappy. This is why 'North Star Metric' isn't just a buzzword."
+**Deliverable:** North Star Metric selection framework + a worked example connecting it to leading indicators.
+**Business example:** Product strategy alignment exercise.
+**Dataset:** Online Retail II or GA4 sample (reused).
+**GitHub:** `day27-north-star-metric`.
+**Portfolio idea:** Strong "framework thinking" post — pairs well with Day 20's capstone narrative.
+**Decision Card:**
+- Insight: State the proposed North Star Metric and the 2–3 leading indicators that feed it.
+- Recommendation: Replace revenue-only tracking with the North Star + leading indicators so teams catch problems before revenue reflects them.
+- Confidence: Medium — the "right" North Star is debatable and depends on business model.
+- Next: Stress-test the metric against a scenario where it could be gamed.
+**CTA:** "If you had to pick ONE North Star Metric for your product, what would it be?"
+
+### Day 28 — Type 1 vs. Type 2 Decisions (Bezos Framework)
+**Hook:** "We spent three weeks debating a decision that was completely reversible. That's when I learned the difference between Type 1 and Type 2."
+**Deliverable:** Decision-classification framework applied to 3–5 real analysis decisions from this series (e.g., which CLV model, which churn threshold).
+**Business example:** Faster, better-calibrated decision-making in data teams.
+**Dataset:** N/A — framework/process post, references prior days' decisions.
+**GitHub:** `day28-decision-framework` — simple decision-classification checklist template.
+**Portfolio idea:** Great capstone-adjacent post — shows judgment, not just technical skill, to recruiters.
+**Decision Card:**
+- Insight: State which past decision in this series was actually reversible (Type 2) but got treated like it was permanent (Type 1).
+- Recommendation: Fast-track Type 2 decisions with a lightweight process; reserve deep analysis and consensus-building for true Type 1 decisions.
+- Confidence: High on the framework's logic; medium on correctly classifying any specific decision in the moment.
+- Next: Build a simple checklist to classify decisions before a meeting, not during one.
+**CTA:** "What's a decision your team treated as irreversible that really wasn't?"
